@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylsheet" href="./css/style.css">
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+    <link rel="stylsheet" href="./Assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 
@@ -22,7 +22,8 @@
 
     <main>
         <!-- Search Section-->
-      <div class=" container"> 
+        <br>
+      <div class="container">
         <div class="row">
             <div class="form-group col-sm-6" style="max-width: 20rem;">
                 <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Today's Weather In...</label>
@@ -32,78 +33,68 @@
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
-            <!-- Search History Buttons -->
-            <div class="d-grid gap-2 col-sm-6 p-4" style="max-width: 20rem;">
-                <button type="button" class="btn btn-primary btn-sm">Refresh List</button>
-                <button type="button" class="btn btn-primary btn-sm" id="clearH">City #1</button>
+            <div class="card text-white bg-warning mb-3 col-md-2 w-100 h-75" style="max-width: 20rem;">
+                <div class="card-header">CITY NAME</div>
+                <div class="card-body">
+                    <h1 class="card-title">Date</h1>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
             </div>
-        </div>
-      </div>  
-        <br>
-      <div class="container">
-        <div class="row">
-            <div class="col-3 card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
+           <div class="row">
+            <div class="d-grid gap-2 col-sm-6 p-4 h-25" style="max-width: 20rem;">
+                <button type="button" class="btn btn-outline-primary btn-sm">Refresh List</button>
+                <button type="button" class="btn btn-primary btn-sm" id="clearH">City #1</button>
+            
+            </div>
+            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
                 <div class="card-header">DAY</div>
                 <div class="card-body">
-                    <h1 class="city">Warning card title</h1>
+                    <h2 class="city">Warning card title</h2>
                     <h2 class="date"></h2>
                     <h3 class="temp"></h3>
                     <p class="card-text"></p>
                 </div>
             </div>
-            <div class="col-3 card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
+            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
                 <div class="card-header">DAY</div>
                 <div class="card-body">
-                    <h1 class="card-title">Warning card title</h1>
+                    <h2 class="city">Warning card title</h2>
+                    <h2 class="date"></h2>
+                    <h3 class="temp"></h3>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
+                <div class="card-header">DAY</div>
+                <div class="card-body">
+                    <h3 class="card-title">Warning card title</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                 </div>
             </div>
-            <div class="card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
+            <div class="card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
                 <div class="card-header">DAY</div>
                 <div class="card-body">
-                    <h4 class="card-title">Warning card title</h4>
+                    <h3 class="card-title">Warning card title</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                 </div>
             </div>
-            <div class="card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
+            <div class="card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
                 <div class="card-header">DAY</div>
                 <div class="card-body">
-                    <h4 class="card-title">Warning card title</h4>
+                    <h3 class="card-title">Warning card title</h3>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                 </div>
             </div>
-            <div class="card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h4 class="card-title">Warning card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-warning mb-3 col-md-2" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h4 class="card-title">Warning card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            
         </div>
-      </div>  
-        <br>
-        <!-- Weather Search Results Here -->
-        
-        <!-- 5-day forecast w/ date, weather cond. icons, temp, w,s,humid -->
-        <!-- Search History -->
-        <!-- five-day -->
+      </div> 
 
     </main>
 
-    <script src="./js/main.js"></script>
+    <script src="./Assets/js/main.js"></script>
 </body>
 
 </html>
