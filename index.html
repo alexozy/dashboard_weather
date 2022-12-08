@@ -21,76 +21,85 @@
     </header>
 
     <main>
-        <!-- Search Section-->
-        <br>
-      <div class="container">
-        <div class="row">
-            <div class="form-group col-sm-6" style="max-width: 20rem;">
-                <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Today's Weather In...</label>
-                <!-- Search Input -->
-                <form class="d-flex">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-            <div class="card text-white bg-warning mb-3 col-md-2 w-100 h-75" style="max-width: 20rem;">
-                <div class="card-header">CITY NAME</div>
-                <div class="card-body">
-                    <h1 class="card-title">Date</h1>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+        <!-- Search Side section -->
+        <div class="container">
+            <div class="row">
+                <div class="form-group col-sm-6" style="max-width: 20rem;">
+                    <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Today's Weather In...</label>
+                    <!-- Search Input -->
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <!-- Today's Weather Display -->
+                <div class="card text-white bg-warning mb-3 col-md-2 w-100 h-75" style="max-width: 20rem;">
+                    <div class="card-header">CITY NAME</div>
+                    <div class="card-body">
+                        <h1 class="card-title">Date</h1>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <!-- Search History/Refresh Button -->
+                <div class="row">
+                    <div class="d-grid gap-2 col-sm-6 p-4 h-25" style="max-width: 20rem;">
+                        <button type="button" class="btn btn-outline-primary btn-sm">Refresh List</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="clearH">City #1</button>
+
+                    </div>
+                    <!-- 5Day ForeCast -->
+                    <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
+                        <div class="card-header">DAY</div>
+                        <div class="card-body">
+                            <h2 class="city">Warning card title</h2>
+                            <h2 class="date"></h2>
+                            <h3 class="temp"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
+                        <div class="card-header">DAY</div>
+                        <div class="card-body">
+                            <h2 class="city">Warning card title</h2>
+                            <h2 class="date"></h2>
+                            <h3 class="temp"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
+                        <div class="card-header">DAY</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Warning card title</h3>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="card text-white bg-warning mb-3 col-md-4 " style="max-width: 20rem;">
+                            <div class="card-header">DAY</div>
+                            <div class="card-body">
+                                <h3 class="card-title">Warning card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-warning mb-3 col-md-4 " style="max-width: 20rem;">
+                            <div class="card-header">DAY</div>
+                            <div class="card-body">
+                                <h3 class="card-title">Warning card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-           <div class="row">
-            <div class="d-grid gap-2 col-sm-6 p-4 h-25" style="max-width: 20rem;">
-                <button type="button" class="btn btn-outline-primary btn-sm">Refresh List</button>
-                <button type="button" class="btn btn-primary btn-sm" id="clearH">City #1</button>
-            
-            </div>
-            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h2 class="city">Warning card title</h2>
-                    <h2 class="date"></h2>
-                    <h3 class="temp"></h3>
-                    <p class="card-text"></p>
-                </div>
-            </div>
-            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h2 class="city">Warning card title</h2>
-                    <h2 class="date"></h2>
-                    <h3 class="temp"></h3>
-                    <p class="card-text"></p>
-                </div>
-            </div>
-            <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h3 class="card-title">Warning card title</h3>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h3 class="card-title">Warning card title</h3>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-            <div class="card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;">
-                <div class="card-header">DAY</div>
-                <div class="card-body">
-                    <h3 class="card-title">Warning card title</h3>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-      </div> 
 
     </main>
 
