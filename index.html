@@ -28,8 +28,8 @@
                     <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Today's Weather In...</label>
                     <!-- Search Input -->
                     <form class="d-flex searchBtn">
-                        <input class="form-control me-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                        <input class="form-control me-sm-2" type="text" placeholder="Search" id="searchedC">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="addCities">Search</button>
                     </form>
                 </div>
                 <!-- Today's Weather Display -->
@@ -48,7 +48,7 @@
                     <div class="d-grid gap-2 col-sm-6 p-4 h-25" style="max-width: 20rem;">
                         <button type="button" class="btn btn-outline-primary btn-sm"id="clearH">Refresh List</button>
                         <button type="button" class="btn btn-primary btn-sm" id="clearH"></button>
-
+                    <div class="saveHist"></div>
                     </div>
                     <!-- 5Day ForeCast -->
                     <div class="col-3 card text-white bg-warning mb-3 col-md-4" style="max-width: 20rem;"id="day1">
@@ -107,7 +107,8 @@
             </div>
 
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/js/main.js"></script>
 </body>
 
