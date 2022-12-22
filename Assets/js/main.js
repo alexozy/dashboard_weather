@@ -55,48 +55,47 @@ $("#clearH").on('click', clearLocalStorage);
 //API retrieval & display of data
 // lat/lon https://api.openweathermap.org/data/2.5/weather?q=atlanta&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95
 
-var currentDay = "https://api.openweathermap.org/data/2.5/weather?q="+ cityInput +"&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95" 
+var currentDay = "https://api.openweathermap.org/data/2.5/weather?q=atlanta&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95" 
+
 fetch(currentDay).then(function (response) {
+
         return response.json()
+
 }).then(function (data) {
-        console.log(data)
-// putting information on my cards
-        // for (i=2; i <= 6; i++) {
-        //         var day = data.list [(i-2) * 8];
-        //         var degrees = document.querySelector('.degrees' + i);
-        //         degrees.innerHTML = day.main.temp;
-        //         var humidity =document.querySelector('.humidity' + i);
-        //         humidity.innerHTML = day.main.humidity;
-
-
-        // }
-        // pulling info from the API/JSON page
         var {name} = data;
-        var {speed} = data.wind;
+        var {icon, description} = data.weather [0];
         var {temp, humidity} = data.main;
+        var {speed} = data.wind;
         var {lon,lat} = data.coord;
-        console.log(name, speed)
-
-        //querySelector (string concat within query selectors)
-        var cities = (city)
-        console.log (cities)
-        $(".card-header" + cities).text
-
-        var lat = data.coord.lat
-        var lon = data.coord.lon
-        var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
-
-        fetch(fiveDay).then(function (response) {
-                return response.json()
-        }).then(function (data) {
-                // If statement goes here for specific time
-                console.log(data)
-                var day = 1
-                // forLoop
-                $(".temp" + day).text
-        })
-
+        console.log(name, icon, temp, speed, lon, lat);
 });
 
 // create an if to target a specific time// would be
 
+
+// // putting information on my cards
+//         // pulling info from the API/JSON page
+//         var {name} = data;
+//         var {speed} = data.wind;
+//         var {temp, humidity} = data.main;
+//         var {lon,lat} = data.coord;
+//         console.log(name, speed)
+
+//         //querySelector (string concat within query selectors)
+//         var cities = (city)
+//         console.log (cities)
+//         $(".card-header" + cities).text
+
+//         var lat = data.coord.lat
+//         var lon = data.coord.lon
+//         var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+
+//         fetch(fiveDay).then(function (response) {
+//                 return response.json()
+//         }).then(function (data) {
+//                 // If statement goes here for specific time
+//                 console.log(data)
+//                 var day = 1
+//                 // forLoop
+//                 $(".temp" + day).text
+//         })
