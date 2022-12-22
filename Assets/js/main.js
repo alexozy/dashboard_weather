@@ -1,10 +1,11 @@
 // Variable Declaration
 var apiKey = "71d7a3ac04487b24c5d8fe8c53a8bf95";
 var cityInput = document.getElementById('searchedC').value;
-var dateDisplay = document.querySelector(".date")
+var dateDisplay = document.querySelector(".date1")
         setInterval(function(){
-                dateDisplay.textContent = moment().format ("MMMM Do YYYY")
-        }),
+                dateDisplay.textContent = moment().format('LL')
+        })
+
 
 
 // Global localStorage
@@ -88,31 +89,3 @@ $("form").submit(function (event) {
 });
 
 // create an if to target a specific time// would be
-
-
-// // putting information on my cards
-//         // pulling info from the API/JSON page
-//         var {name} = data;
-//         var {speed} = data.wind;
-//         var {temp, humidity} = data.main;
-//         var {lon,lat} = data.coord;
-//         console.log(name, speed)
-
-//         //querySelector (string concat within query selectors)
-//         var cities = (city)
-//         console.log (cities)
-//         $(".card-header" + cities).text
-
-//         var lat = data.coord.lat
-//         var lon = data.coord.lon
-//         var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
-
-//         fetch(fiveDay).then(function (response) {
-//                 return response.json()
-//         }).then(function (data) {
-//                 // If statement goes here for specific time
-//                 console.log(data)
-//                 var day = 1
-//                 // forLoop
-//                 $(".temp" + day).text
-//         })
