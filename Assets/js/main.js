@@ -1,7 +1,10 @@
 // Variable Declaration
 var apiKey = "71d7a3ac04487b24c5d8fe8c53a8bf95";
 var cityInput = document.getElementById('searchedC').value;
-
+var dateDisplay = document.querySelector(".date")
+        setInterval(function(){
+                dateDisplay.textContent = moment().format ("MMMM Do YYYY")
+        }),
 
 
 // Global localStorage
@@ -47,7 +50,7 @@ let WeatherStuff = {
         fetch(currentDay).then(function (response) {
                 
         return response.json()
-        
+        // this is the information for the FIRST weather card. the classes will be different for this one
         }).then(function (data) {
                 var { name } = data;
                 var { icon, description } = data.weather[0];
@@ -55,6 +58,9 @@ let WeatherStuff = {
                 var { speed } = data.wind;
                 var { lon, lat } = data.coord;
                 console.log(name, icon, temp, speed, lon, lat);
+                document.querySelector(".cityN").innerText = name;
+                document.querySelector(".degrees1").innerHTML = temp + "°F";
+                document.querySelector(".humidity1").innerHTML = "Humidity:" + humidity + "%";
 
         });
 },
