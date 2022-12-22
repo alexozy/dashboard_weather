@@ -60,10 +60,14 @@ let WeatherStuff = {
                 var { lon, lat } = data.coord;
                 console.log(name, icon, temp, speed, lon, lat);
                 document.querySelector(".cityN").innerText = name;
-                document.querySelector(".degrees1").innerHTML = temp + "°F";
-                document.querySelector(".humidity1").innerHTML = "Humidity:" + humidity + "%";
+                document.querySelector(".degrees1").innerHTML = temp + " °F";
+                document.querySelector(".humidity1").innerHTML = "Humidity: " + humidity + "%";
+                document.querySelector(".emoji1").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+                document.querySelector(".wind1").innerHTML = "Wind Speed: " + speed + "mph";
 
-        });
+        }).then(function(){
+
+        })
 },
 
 
