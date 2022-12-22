@@ -1,5 +1,6 @@
 // Variable Declaration
 var apiKey = "71d7a3ac04487b24c5d8fe8c53a8bf95";
+var cityInput = document.getElementById('searchedC').value;
 
 
 
@@ -54,11 +55,21 @@ $("#clearH").on('click', clearLocalStorage);
 //API retrieval & display of data
 // lat/lon https://api.openweathermap.org/data/2.5/weather?q=atlanta&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95
 
-var currentDay = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey
+var currentDay = "https://api.openweathermap.org/data/2.5/weather?q="+ cityInput +"&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95" 
 fetch(currentDay).then(function (response) {
         return response.json()
 }).then(function (data) {
         console.log(data)
+// putting information on my cards
+        // for (i=2; i <= 6; i++) {
+        //         var day = data.list [(i-2) * 8];
+        //         var degrees = document.querySelector('.degrees' + i);
+        //         degrees.innerHTML = day.main.temp;
+        //         var humidity =document.querySelector('.humidity' + i);
+        //         humidity.innerHTML = day.main.humidity;
+
+
+        // }
         // pulling info from the API/JSON page
         var {name} = data;
         var {speed} = data.wind;
