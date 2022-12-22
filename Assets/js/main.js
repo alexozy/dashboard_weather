@@ -66,7 +66,21 @@ let WeatherStuff = {
                 document.querySelector(".wind1").innerHTML = "Wind Speed: " + speed + "mph";
 
         });
+
 },
+
+        fetchNextDay: function(city){
+                var fiveDays = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95"
+                fetch(fiveDays)
+                .then(function (response){
+                return response.json()
+                }).then(function (data){
+                        console.log(data)
+                })
+                
+
+        
+        },
 
 
         search: function () {
