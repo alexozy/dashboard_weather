@@ -65,9 +65,7 @@ let WeatherStuff = {
                 document.querySelector(".emoji1").src = "https://openweathermap.org/img/wn/" + icon + ".png";
                 document.querySelector(".wind1").innerHTML = "Wind Speed: " + speed + "mph";
 
-        }).then(function(){
-
-        })
+        });
 },
 
 
