@@ -48,11 +48,11 @@ function weatherStuff (event){
     var cityInput = document.getElementById('searchCity').value;
     searchedHistory.push(cityInput);
     localStorage.setItem('lsCities', JSON.stringify(searchedHistory));
-    console.log(locatlStorage);
+    console.log(localStorage);
 
 // fetch weather
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=' +cityInput + '&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95')
 .then(function(response){
     return response.json ()
 })
@@ -63,7 +63,14 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' +cityInput + '&units=
         // placing on the card
         degrees.innerHTML = day.main.temp;
         var humidity = document.querySelector('.humidity'+i);
+        humidity.innerHTML = day.main.humidity;
+        var date = document.querySelector('.date'+ i);
+        date.innerHTML = day.dt_txt;
     }
 })
 
-}
+};
+
+// you need to call your function!
+var searchProcess = document.getElementById('letsGo');
+searchProcess.addEventListener('submit', weatherStuff)
