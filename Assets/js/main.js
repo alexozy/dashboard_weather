@@ -1,6 +1,8 @@
 // Variable Declaration
 var apiKey = "71d7a3ac04487b24c5d8fe8c53a8bf95";
 
+
+
 // Global localStorage
 // JSON.parse converts string back to array | short hand if statement for empty array = ||[]
 //you want to getItem first, so the old stuff is saved (did this globally); you can also do within the function but locally is easier for the code.
@@ -52,7 +54,7 @@ $("#clearH").on('click', clearLocalStorage);
 //API retrieval & display of data
 // lat/lon https://api.openweathermap.org/data/2.5/weather?q=atlanta&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95
 
-var currentDay = "https://api.openweathermap.org/data/2.5/weather?q=atlanta&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95"
+var currentDay = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey
 fetch(currentDay).then(function (response) {
         return response.json()
 }).then(function (data) {
