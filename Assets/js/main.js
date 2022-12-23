@@ -66,9 +66,7 @@ let WeatherStuff = {
                 document.querySelector(".wind1").innerHTML = "Wind Speed: " + speed + "mph";
 
         });
-
 },
-
         fetchNextDay: function(city){
                 var fiveDays = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=71d7a3ac04487b24c5d8fe8c53a8bf95"
                 fetch(fiveDays)
@@ -76,6 +74,30 @@ let WeatherStuff = {
                 return response.json()
                 }).then(function (data){
                         console.log(data)
+        // five day card innerHTML goes here
+                 var plugDate = document.getElementsByClassName("date")
+                //   forLoop to cycle through each date class and paste to card;
+                //  alternate ways to write a forLoop
+                 let i = 0;
+                 let length = plugDate.length;
+                 for(; i<length; (i++)){
+                        var dates = moment.unix(`${data.list[i*8].dt}`).format('LL')
+                        var dateP = plugDate[i]
+
+                        dateP.innerHTML = dates
+
+                 }  
+                //  humidty Cards    
+                 var plugHumidity = document.getElementsByClassName("humidity")
+                //   let i = 0;
+                //   let lengthH = plugHumidity.length;
+                  for(i=0;i<plugHumidity.length; (i++)){
+                        var humids =`Humidity: ${data.list[i*8].main.humidity}%`
+                        var humidP = plugHumidity[i]
+
+                        humidP.innerHTML = humids
+                  }
+
                 })
                 
 
@@ -85,6 +107,7 @@ let WeatherStuff = {
 
         search: function () {
                 this.fetchAttempt(document.querySelector("#searchedC").value)
+                this.fetchNextDay(document.querySelector("#searchedC").value)
         }
 };
 
