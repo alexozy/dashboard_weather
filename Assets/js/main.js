@@ -119,8 +119,6 @@ let WeatherStuff = {
                         windP.innerHTML = windS
                   }
                 })
-                
-
         
         },
 
