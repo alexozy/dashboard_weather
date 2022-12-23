@@ -6,11 +6,11 @@ For this application, we were tasked with creating an interactive dashboard that
 
 ### Live Application Link
 
-* Click this [link](https://www.owasp.org/index.php/Password_special_characters) to access the password generator live.
+* Click this [link](https://alexozy.github.io/dashboard_weather/) to access the weather dashboard live.
 
 ## Application Mock-Up
 
-This is an image of the web application appearance after refactoring:
+This is an image of the web application appearance:
 
 ![application mock-up of weather dashboard.](./Assets/images/_Users_ozyalex_gt-bootcamp_homework_dashboard_weather_index.html.png)
 

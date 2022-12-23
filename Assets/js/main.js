@@ -144,5 +144,12 @@ $("form").submit(function (event) {
         displaySearchHistory()
         WeatherStuff.search();
 });
-
-// create an if to target a specific time// would be
+// this should allow users to click the appended buttons to cycle back to their search
+// the goal is to tell the event listener to run a function that pulls the city and returns the user back to the original searched city
+$(".saveHist").on("click", (event)=> {
+        event.preventDefault();
+        if(event.target.tagName === "BUTTON"){
+                WeatherStuff.fetchAttempt(event.target.innerText);
+                WeatherStuff.fetchNextDay(event.target.innerText);
+        };
+});
