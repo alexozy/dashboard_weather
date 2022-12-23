@@ -83,7 +83,6 @@ let WeatherStuff = {
                  for(; i<length; (i++)){
                         var dates = moment.unix(`${data.list[i*8].dt}`).format('LL')
                         var dateP = plugDate[i]
-
                         dateP.innerHTML = dates
 
                  }  
@@ -94,10 +93,31 @@ let WeatherStuff = {
                   for(i=0;i<plugHumidity.length; (i++)){
                         var humids =`Humidity: ${data.list[i*8].main.humidity}%`
                         var humidP = plugHumidity[i]
-
                         humidP.innerHTML = humids
                   }
+                //   temp Cards
+                var plugDegrees = document.getElementsByClassName("degrees")
+                for(i=0;i<plugDegrees.length; (i++)){
+                        var degreeS = (`${data.list[i*8].main.temp}°F`)
+                        var degreeP = plugDegrees[i]
 
+                        degreeP.innerHTML = degreeS
+                  }
+                //   emoji Cards
+                var plugEmojis = document.getElementsByClassName("emoji")
+                for(i=0;i<plugEmojis.length; (i++)){
+                        var emojiS = (data.list[i*8].weather[0].icon)
+                        var emojisP = ("https://openweathermap.org/img/wn/" + emojiS + ".png")
+                        var emojiP = plugEmojis[i]
+                        emojiP.src = emojisP
+                  }
+                //  wind Cards
+                var plugWind = document.getElementsByClassName("wind")
+                for(i=0;i<plugWind.length; (i++)){
+                        var windS = `Wind Speed: ${data.list[i*8].wind.speed} MPH`;
+                        var windP = plugWind[i]
+                        windP.innerHTML = windS
+                  }
                 })
                 
 
